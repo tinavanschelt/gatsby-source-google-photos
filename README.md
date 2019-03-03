@@ -1,8 +1,8 @@
 # Gatsby-Source-Google-Photos
 
-A Gatsby source plugin for sourcing photos from specific albums in your Google Photos Library and creating `GooglePhoto` nodes.
+A [Gatsby](https://www.gatsbyjs.org/) plugin for sourcing photos from specific albums in your Google Photos Library and creating `GooglePhoto` nodes.
 
-## Getting started
+## Requirements for getting started
 
 In order to use this plugin you need to create a project and get a `Client ID` and `Client secret` from the [Google API Console](https://console.developers.google.com/apis/library?project=pragmatic-mote-231017&folder&organizationId). To obtain the necessary credentials follow the "Configure your app" [instructions](https://developers.google.com/photos/library/guides/get-started#configure-app) in the **Get started with REST** section of the Google Photos API docs.
 
@@ -14,16 +14,16 @@ In order to use this plugin you need to create a project and get a `Client ID` a
 
 1. Setup environment variables
 
-   1.1 Create a `.env` file in the root of your project and specify your environment variables
+   1.1 Create a `.env` file in the root of your project and specify your environment variables (obtained from the Google API Console) as follows
 
    ```
    GOOGLE_CLIENT_ID=XXXXXXXXXX
    GOOGLE_CLIENT_SECRET=XXXXXXXXXX
    ```
 
-   1.2 Add `require("dotenv").config()` to the top of `gatsby-config.js`
+   1.2 Add `require("dotenv").config()` to the top your `gatsby-config.js`
 
-   1.3 Remember to add .env to the `.gitignore` file
+   1.3 Remember to add .env to your `.gitignore` file
 
 Now you should be able to access your environment variables using `process.env.VARIABLE_NAME` in `gatsby-config.js`. In our case that's `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`.
 
