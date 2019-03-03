@@ -12,8 +12,6 @@ const randomKey = () => {
 
 const readToken = () => {
   if (fileExist.sync(path.resolve(__dirname, 'token.json'))) {
-    //let tokens = fs.readFileSync(tokenFile, 'utf-8')
-    //let tokenObj = crypto.decrypt(JSON.parse(tokens.toString()), 'secret123')
     let tokenObj = fs.readFileSync(tokenFile, 'utf-8')
     return JSON.parse(tokenObj)
   } else {
