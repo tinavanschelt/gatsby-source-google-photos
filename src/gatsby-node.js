@@ -1,10 +1,10 @@
-import { authGooglePhotos, checkAuth } from "./auth.js"
-import axios from "axios"
-import colors from "colors"
+import { authGooglePhotos, checkAuth } from './auth.js'
+import axios from 'axios'
+import colors from 'colors'
 
-import { getAlbumId } from "./utils/album.js"
-import { readToken } from "./utils/token.js"
-import { globalConst, colorsTheme } from "./config.js"
+import { getAlbumId } from './utils/album.js'
+import { readToken } from './utils/token.js'
+import { globalConst, colorsTheme } from './config.js'
 
 colors.setTheme(colorsTheme)
 
@@ -26,37 +26,37 @@ exports.sourceNodes = async (
     }
 
     const headers = {
-      headers: { Authorization: `Bearer ${res}` },
+      headers: { Authorization: `Bearer ${res}` }
     }
 
     try {
-      const processPhoto = (album, photo) => {
+      const processPhoto = (albumTitle, photo) => {
         let { id } = photo
-        const photoData = Object.assign({ album }, photo)
+        const photoData = Object.assign({ albumTitle }, photo)
         const nodeContent = JSON.stringify(photoData)
         const nodeData = Object.assign({}, photoData, {
           id: `${id}`,
           children: [],
           parent: null,
           internal: {
-            type: "GooglePhoto",
+            type: 'GooglePhoto',
             content: nodeContent,
-            contentDigest: createContentDigest(photoData),
-          },
+            contentDigest: createContentDigest(photoData)
+          }
         })
 
         return nodeData
       }
 
-      for (const album of albums) {
+      for (const albumTitle of albums) {
         const albumId = await getAlbumId(
           `${globalConst.baseUrl}`,
           headers,
-          album
+          albumTitle
         )
 
         if (albumId === undefined) {
-          throw `Cannot find album with title ${album}. Check you gatsby-config.js file.`
+          throw `Cannot find album with title ${albumTitle}. Check you gatsby-config.js file.`
         } else {
           const albumMediaItems = await axios.post(
             `${globalConst.baseUrl}/mediaItems:search`,
@@ -67,14 +67,14 @@ exports.sourceNodes = async (
           const { mediaItems } = albumMediaItems.data
           const photos = mediaItems.filter(
             item =>
-              item.filename.indexOf(".mov") === -1 &&
-              item.filename.indexOf(".m4v") === -1 &&
-              item.filename.indexOf(".mp4") === -1 &&
-              item.filename.indexOf(".avi") === -1
+              item.filename.indexOf('.mov') === -1 &&
+              item.filename.indexOf('.m4v') === -1 &&
+              item.filename.indexOf('.mp4') === -1 &&
+              item.filename.indexOf('.avi') === -1
           )
 
           photos.forEach(photo => {
-            const nodeData = processPhoto(album, photo)
+            const nodeData = processPhoto(albumTitle, photo)
             createNode(nodeData)
           })
         }
