@@ -90,3 +90,11 @@ I encountered a couple of limitations whilst patching this thing together.
 1.  **OAuth**: The only way to authorize a Google Photos API request is via OAuth, that means that the user (you) has to grant access when the initial build is running.
 
 2.  **Filters**: Currently, the Google Photos API does not support simultaneously specifing an albumId and a mediaType filter. Issue being tracked [here](https://issuetracker.google.com/issues/116541300). We get the mediaItems in a specific album and the filter out the photos afterwards.
+
+## Dependencies and Kudos
+
+- The plugin uses [axios](https://github.com/axios/axios) for API requests
+- [simple-oauth2](https://github.com/lelylan/simple-oauth2) for authentication
+- [chalk](https://github.com/chalk/chalk) for syntax highlighting
+
+The [gatsby-source-mautic](https://github.com/sineau/gatsby-source-mautic) plugin served as a very valuable reference for the OAuth flow
