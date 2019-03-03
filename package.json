@@ -1,18 +1,19 @@
 {
   "name": "gatsby-source-google-photos",
-  "version": "0.7.5",
-  "description": "Source plugin to provide Google Photos API endpoints in Gatsby",
+  "version": "1.0.0",
+  "description": "Source plugin that provides Google Photos API endpoints in Gatsby",
   "author": "tinavanschelt <tinavanschelt@gmail.com>",
   "license": "MIT",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
     "source",
-    "google-photos"
+    "google-photos",
+    "source-google-photos",
+    "photos"
   ],
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
-    "prepublish": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore __tests__"
   },
   "dependencies": {
