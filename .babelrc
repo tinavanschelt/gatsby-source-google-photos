@@ -1,0 +1,14 @@
+{
+  "sourceMaps": true,
+  "plugins": ["add-module-exports", "transform-object-rest-spread"],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}
