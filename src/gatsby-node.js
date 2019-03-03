@@ -1,12 +1,9 @@
 import { authGooglePhotos, checkAuth } from './auth.js'
 import axios from 'axios'
-import colors from 'colors'
 
 import { getAlbumId } from './utils/album.js'
 import { readToken } from './utils/token.js'
-import { globalConst, colorsTheme } from './config.js'
-
-colors.setTheme(colorsTheme)
+import { globalConst, error } from './config.js'
 
 exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
@@ -80,9 +77,9 @@ exports.sourceNodes = async (
         }
       }
     } catch (err) {
-      console.log(`Error caught while creating node: `.error, err)
+      console.log(error(`Error caught while creating node: `), err)
     }
   } else {
-    throw `Please provide all the info for oauth2. See documentation.`.error
+    throw `Please provide all the info for oauth2. See documentation.`
   }
 }

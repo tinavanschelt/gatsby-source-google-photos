@@ -15,7 +15,7 @@ const readToken = () => {
     let tokenObj = fs.readFileSync(tokenFile, 'utf-8')
     return JSON.parse(tokenObj)
   } else {
-    console.log(`\nError reading token`)
+    console.log(error(`\nError reading token`))
     return null
   }
 }
