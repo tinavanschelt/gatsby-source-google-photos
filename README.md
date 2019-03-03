@@ -93,7 +93,9 @@ I encountered a couple of limitations whilst patching this thing together.
 
 ## Dependencies and Kudos
 
-- The plugin uses [axios](https://github.com/axios/axios) for API requests
+The plugin makes use of
+
+- [axios](https://github.com/axios/axios) for API requests
 - [simple-oauth2](https://github.com/lelylan/simple-oauth2) for authentication
 - [chalk](https://github.com/chalk/chalk) for syntax highlighting
 
