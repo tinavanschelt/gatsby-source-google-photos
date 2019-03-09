@@ -87,7 +87,7 @@ I use [rehype-react](https://github.com/rhysd/rehype-react) to render a Photo Gr
 
 I encountered a couple of limitations whilst patching this thing together.
 
-1.  **OAuth**: The only way to authorize a Google Photos API request is via OAuth, that means that the user (you) has to grant access when the initial build is running.
+1.  **OAuth**: The only way to authorize a Google Photos API request is via OAuth, that means that the user (you) has to grant access when the initial build is running, which can complicate things when deploying. I build my site locally and then simply drag the folder to Netlify as outlined [here](https://www.gatsbyjs.org/docs/hosting-on-netlify).
 
 2.  **Filters**: Currently, the Google Photos API does not support simultaneously specifing an albumId and a mediaType filter. Issue being tracked [here](https://issuetracker.google.com/issues/116541300). We get the mediaItems in a specific album and the filter out the photos afterwards.
 

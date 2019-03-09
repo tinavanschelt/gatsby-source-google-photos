@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-google-photos",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Source plugin that provides Google Photos API endpoints in Gatsby",
   "author": "tinavanschelt <tinavanschelt@gmail.com>",
   "license": "MIT",

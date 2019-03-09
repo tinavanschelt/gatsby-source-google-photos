@@ -1,5 +1,6 @@
 import { AES as crypto } from 'crypto-js'
 import fileExist from 'file-exists'
+import { error } from '../config.js'
 
 var path = require('path')
 var fs = require('fs')

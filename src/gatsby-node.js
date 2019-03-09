@@ -28,8 +28,11 @@ exports.sourceNodes = async (
 
     try {
       const processPhoto = (albumTitle, photo) => {
-        let { id } = photo
-        const photoData = Object.assign({ albumTitle }, photo)
+        const { id, description } = photo
+        const photoData =
+          description === undefined
+            ? Object.assign({ albumTitle, description: '' }, photo)
+            : Object.assign({ albumTitle }, photo)
         const nodeContent = JSON.stringify(photoData)
         const nodeData = Object.assign({}, photoData, {
           id: `${id}`,

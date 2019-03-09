@@ -10,6 +10,8 @@ var _fileExists = require('file-exists');
 
 var _fileExists2 = _interopRequireDefault(_fileExists);
 
+var _config = require('../config.js');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var path = require('path');
@@ -26,7 +28,7 @@ const readToken = () => {
     let tokenObj = fs.readFileSync(tokenFile, 'utf-8');
     return JSON.parse(tokenObj);
   } else {
-    console.log(error(`\nError reading token`));
+    console.log((0, _config.error)(`\nError reading token`));
     return null;
   }
 };
