@@ -81,7 +81,11 @@ allGooglePhoto(filter: { albumTitle: { eq: "" } })
 
 All the `mediaItem` properties [outlined in the Google Photos API](https://developers.google.com/photos/library/guides/access-media-items#media-items) are available on the GooglePhoto node, with the addition of `albumTitle`.
 
-I use [rehype-react](https://github.com/rhysd/rehype-react) to render a Photo Grid component within my markdown files, currently working on an example / component plugin.
+## Example usage
+
+I use [rehype-react](https://github.com/rhysd/rehype-react) to render a gallery component ([https://github.com/tinavanschelt/gatsby-google-photos-gallery](https://github.com/tinavanschelt/gatsby-google-photos-gallery))) within my markdown files
+
+Example using gatsby-starter-blog, gatsby-source-google-photos and gatsby-google-photos-gallery: [https://github.com/tinavanschelt/gatsby-google-photos-gallery-example](https://github.com/tinavanschelt/gatsby-google-photos-gallery-example)
 
 ## Caveats
 
