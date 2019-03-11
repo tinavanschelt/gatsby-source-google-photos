@@ -83,7 +83,7 @@ All the `mediaItem` properties [outlined in the Google Photos API](https://devel
 
 ## Example usage
 
-I use [rehype-react](https://github.com/rhysd/rehype-react) to render a gallery component ([https://github.com/tinavanschelt/gatsby-google-photos-gallery](https://github.com/tinavanschelt/gatsby-google-photos-gallery))) within my markdown files
+I use [rehype-react](https://github.com/rhysd/rehype-react) to render a gallery component ([https://github.com/tinavanschelt/gatsby-google-photos-gallery](https://github.com/tinavanschelt/gatsby-google-photos-gallery)) within my markdown files
 
 Example using gatsby-starter-blog, gatsby-source-google-photos and gatsby-google-photos-gallery: [https://github.com/tinavanschelt/gatsby-google-photos-gallery-example](https://github.com/tinavanschelt/gatsby-google-photos-gallery-example)
 
