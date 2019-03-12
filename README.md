@@ -1,5 +1,8 @@
 # Gatsby-Source-Google-Photos
 
+#### *IMPORTANT*
+*Google Photos refreshes the baseUrl after 60 minutes, in other words, your images will only be visible for an hour. I wanted to make this work as I had a bunch of travel pictures on google photos that I didn't want to migrate, but the platform just isn't intended for hosting images. I'm archiving this repo and migrating the gallery component over to Cloudinary.*
+
 A [Gatsby](https://www.gatsbyjs.org/) plugin for sourcing photos from specific albums in your Google Photos Library and creating `GooglePhoto` nodes.
 
 ## Requirements for getting started
